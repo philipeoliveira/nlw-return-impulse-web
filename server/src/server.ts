@@ -15,6 +15,6 @@ app.use(cors()); // cors() permite qualquer front-end usar este server em Desenv
 app.use(express.json());
 app.use(routes);
 
-app.listen(3333, () => {
+app.listen(process.env.PORT || 3333, () => {
    console.log('HTTP server running!');
 });
